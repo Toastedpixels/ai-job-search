@@ -1,7 +1,9 @@
 ---
 name: scrape
 description: >
-  Scrapes Danish job sites for new positions matching your profile. Deduplicates across runs.
+  Scrapes job sites for new positions matching your profile, using whichever portal CLIs are
+  installed under .agents/skills/ (currently configured for the US market) plus WebSearch
+  fallback for portals without a CLI. Deduplicates across runs.
   Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run .agents/skills/*/cli/src/cli.ts *), WebFetch, WebSearch, Agent, AskUserQuestion
 ---
@@ -12,7 +14,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run 
 
 ## How It Works
 
-This skill searches multiple Danish job sites using targeted queries based on your profile, deduplicates against previously seen jobs and the application tracker, and presents new matches with a quick fit assessment.
+This skill searches multiple job sites using targeted queries based on your profile, deduplicates against previously seen jobs and the application tracker, and presents new matches with a quick fit assessment. Which portals it searches depends entirely on what's installed under `.agents/skills/` (see Step 1b) - the skill itself is market-agnostic.
 
 ## Invocation
 

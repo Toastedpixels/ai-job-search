@@ -4,25 +4,26 @@
 
 ## Search Sites
 
-**Important:** The installed CLI portal tools under `.agents/skills/` (jobbank-search, jobdanmark-search, jobindex-search, jobnet-search) are Danish-market-specific and do not apply to this US-based search. Every query below runs through the `WebSearch` fallback path (Step 1c in `SKILL.md`) until dedicated US portal CLIs are added via `/add-portal`.
+**Portal status:** The old Danish CLI tools (jobbank-search, jobdanmark-search, jobindex-search, jobnet-search) are archived under `.agents/skills/_archived/` and are no longer auto-discovered by `/scrape` (see `SKILL.md` Step 1b - it globs `.agents/skills/*/SKILL.md`, one level deep, which the archive folder is excluded from). Active US portals as of this configuration:
 
-Primary (US job market):
-- **linkedin.com/jobs** - LinkedIn job listings (filter: United States / Florida)
-- **indeed.com** - largest general US job board
-- **builtin.com** - tech/startup-focused job board with regional editions (Built In Orlando/Tampa if available, plus national)
-- **wellfound.com** (formerly AngelList Talent) - startup jobs
-- **joinhandshake.com** - early-career/campus recruiting platform (strong fit for recent-grad programs)
-- **hitmarker.net** - gaming industry jobs (for Riot Games, Epic Games, EA, etc.)
+**Real CLI tools (installed, no auth, low request volume, all live-tested):**
+- **linkedin-search** (`.agents/skills/linkedin-search/`) - global keyword + location search, works out of the box. Use for all Priority 1-4 role/location queries below. Confirmed working live for "Operations Coordinator"/"Marketing Analyst"/"Project Coordinator" in Orlando/Florida.
+- **greenhouse-search** (`.agents/skills/greenhouse-search/`) - company-scoped (Greenhouse's public job-board API has no global search). Confirmed working targets from this profile's list: **Toast, Datadog, HubSpot**. Confirmed NOT on Greenhouse under the obvious token: ServiceNow, Adobe, Salesforce (may use a different or non-public ATS - fall back to WebSearch/company career page for those). Usage: `search -c toast[,datadog,hubspot] -q "<title>" --format table`.
+- **lever-search** (`.agents/skills/lever-search/`) - company-scoped, same pattern. **None of this profile's target companies were found on Lever** (AdventHealth, Cigna, Boston Scientific, Abbott, Medtronic, Baxter, Cardinal Health, Microsoft, Adobe, Salesforce, DHL, UPS, FedEx, Ryder all 404'd). Keep for opportunistic use if a new target company turns out to use Lever.
+- **ashby-search** (`.agents/skills/ashby-search/`) - company-scoped. Ashby skews toward startups/scale-ups; **no overlap found with this profile's target companies.** Its `detail` command has no separate API endpoint (requires an Ashby API key) - it re-fetches the full board and matches by id client-side, so `detail` is slightly slower on large boards.
+- **smartrecruiters-search** (`.agents/skills/smartrecruiters-search/`) - confirmed company-scoped (no global postings API exists, verified live). Cardinal Health, Abbott, Baxter, UnitedHealth Group, Cigna, DHL, UPS, FedEx all returned zero/stale results under obvious identifiers - likely off SmartRecruiters now or using a different identifier. Re-check with the actual employer if you find one still using SmartRecruiters via their careers page URL.
 
-Secondary (ATS aggregators via `site:` filters - most mid-size/large employers post here):
-- `site:boards.greenhouse.io`
-- `site:jobs.lever.co`
-- `site:jobs.ashbyhq.com`
-- `site:myworkdayjobs.com`
-- `site:jobs.smartrecruiters.com`
+For all four ATS CLIs, run each portal's own `SKILL.md`/`--help` for exact flags - don't guess. Discover a company's board token from their careers page URL (e.g. `boards.greenhouse.io/<token>`, `jobs.lever.co/<token>`, `jobs.ashbyhq.com/<token>`, `jobs.smartrecruiters.com/<token>`). **Bottom line: of this profile's specific target companies, only Toast, Datadog, and HubSpot were confirmed reachable via a dedicated ATS CLI (all three on Greenhouse) — most target companies (healthcare/pharma, aerospace, logistics, gaming) use ATS platforms without public APIs (Workday, iCIMS, etc.) and need the WebSearch/company-career-page path below.**
 
-Tertiary (company career pages via Google):
-- Direct Google searches with `site:` filters for named target companies (see Target Companies below)
+**WebSearch fallback only (no CLI - no public API, or scraping would fight anti-bot protection/violate ToS):**
+- **indeed.com** - Cloudflare/anti-bot protected, ToS restricts automated access
+- **builtin.com** - no public API
+- **wellfound.com** (formerly AngelList Talent) - requires login for full listings, ToS prohibits scraping
+- **hitmarker.net** - gaming industry jobs (Riot Games, Epic Games, EA, etc.) - no documented public API
+- **joinhandshake.com** - early-career/campus recruiting platform, no public API
+
+Tertiary (company career pages via Google, for employers not on any of the ATS platforms above):
+- Direct Google searches with `site:` filters for named target companies, or `site:myworkdayjobs.com` for Workday-hosted boards (no public API found for Workday; WebSearch fallback)
 
 ## Query Categories
 
@@ -109,8 +110,8 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 
 ## Salary Filter
 
-- Minimum acceptable: $20/hour
-- Preferred range: $24-$35/hour, depending on location and benefits
+- Minimum acceptable: $20/hour (~$42,000/year at full-time hours) - treat these as equivalent thresholds when a posting lists an annual salary instead of hourly
+- Preferred range: $24-$35/hour (~$50,000-$73,000/year), depending on location and benefits
 - Exclude commission-only compensation structures (except base-salary-plus-commission BDR roles)
 
 ## Deal-breaker Filter (exclude outright)
@@ -129,4 +130,4 @@ If the user specifies a focus area, select queries from the matching category an
 
 ## Future Improvement
 
-Consider running `/add-portal` to scaffold a dedicated CLI for a high-value US portal (e.g., Indeed or LinkedIn Jobs) once the WebSearch-fallback approach is validated - a CLI tool will be faster and more reliable than WebSearch for recurring `/scrape` runs.
+If a WebSearch-fallback-only portal (Indeed, Built In, Wellfound, Hitmarker, Handshake) turns out to expose a legitimate public API after all, revisit with `/add-portal` to give it a real CLI - a CLI tool will always be faster and more reliable than WebSearch for recurring `/scrape` runs.

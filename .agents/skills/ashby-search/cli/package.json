@@ -1,0 +1,20 @@
+{
+  "name": "ashby-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on Ashby-hosted company job boards (jobs.ashbyhq.com/<company>) — no authentication, zero runtime dependencies. Company-scoped: you must supply the Ashby board token(s) for the employer(s) you want to search.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "ashby-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

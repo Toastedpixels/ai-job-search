@@ -22,6 +22,8 @@ context: fork
 allowed-tools: Bash(bun run .agents/skills/jobbank-search/cli/src/cli.ts *)
 ---
 
+> **ARCHIVED:** Inactive for the current US-market search configuration. Moved out of `.agents/skills/*/SKILL.md` glob scope so `/scrape` no longer auto-discovers it. Kept for reference and in case Danish-market search is needed again — to reactivate, move this folder back to `.agents/skills/jobbank-search/` and update `allowed-tools` path references above.
+
 # Jobbank Search Skill
 
 Search live Danish job listings from [Akademikernes Jobbank](https://jobbank.dk) — Denmark's primary job portal for highly educated candidates. No authentication needed. Uses the RSS feed for search (up to 100 results) and JSON-LD parsing for detailed job information.

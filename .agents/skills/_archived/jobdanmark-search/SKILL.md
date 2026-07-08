@@ -20,6 +20,8 @@ context: fork
 allowed-tools: Bash(bun run .agents/skills/jobdanmark-search/cli/src/cli.ts *)
 ---
 
+> **ARCHIVED:** Inactive for the current US-market search configuration. Moved out of `.agents/skills/*/SKILL.md` glob scope so `/scrape` no longer auto-discovers it. Kept for reference and in case Danish-market search is needed again — to reactivate, move this folder back to `.agents/skills/jobdanmark-search/` and update `allowed-tools` path references above.
+
 # Jobdanmark Search Skill
 
 Access live Danish job listings from the Jobdanmark.dk public API. No authentication needed.

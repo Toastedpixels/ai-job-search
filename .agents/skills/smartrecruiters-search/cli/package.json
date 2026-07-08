@@ -1,0 +1,20 @@
+{
+  "name": "smartrecruiters-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on SmartRecruiters-hosted company career boards (api.smartrecruiters.com) — no authentication, zero runtime dependencies. Company-scoped: SmartRecruiters has no global keyword search across all employers it hosts, so you must supply one or more SmartRecruiters company identifiers (e.g. \"Equinox\", \"Visa\").",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "smartrecruiters-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}
