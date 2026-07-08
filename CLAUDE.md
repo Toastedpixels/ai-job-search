@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Emely Adames
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Emely Adames, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,38 +16,49 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Emely Adames
+- **Location:** Orlando, FL, USA (open to Central Florida, Tampa, Jacksonville, Miami, remote, Boston, NYC, and nationwide relocation if assistance/compensation makes it realistic)
+- **Languages:** English (Professional), Spanish (Professional working proficiency)
+- **Status:** Recent graduate (B.S. Business Administration, Integrated Business, UCF, May 2026), currently employed part-time/consulting at Adjuster Groups LLC and Dominican Chamber of Commerce of Florida
+- **LinkedIn headline:** "Integrated Business Graduate | Business Analytics & Strategy | Process Improvement"
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.S. in Business Administration, Integrated Business** (2023-2026) - University of Central Florida
+  - Topics: Project Management, Operations Management, Strategic Management, Data-Driven Decision-Making, Negotiation; AMA Growth Committee (regional competition presenter, mentor program designer)
+- **Associate's Degree in Business Administration and Management (General)** (2019-2022) - Valencia College
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Event and Project Consultant** (Jun 2025 - Present) - **Dominican Chamber of Commerce of Florida** (Orlando, FL)
+  - Implemented CiviCRM for membership tracking and redesigned committee-level Google Drive architecture across 5 committees and 2 advisory boards
+  - Wrote governance SOPs and Robert's Rules documentation the board now operates by
+  - Built a prospect-to-member intake pipeline converting 33% of leads in its first quarter
+- **Head of Agency (Promoted from Marketing Analyst)** (Jan 2025 - May 2026) - **Pegasus Promotions, UCF American Marketing Association** (Orlando, FL)
+  - Managed a 15+ person agency across 3 simultaneous client accounts
+  - Drove $42K in tracked revenue, 35x organic reach growth, and 800+ new customers for a restaurant client in under 5 months
+- **Administrative and Operations Assistant** (Dec 2019 - Present) - **Adjuster Groups LLC** (Orlando, FL)
+  - Owns the firm's operational infrastructure: CRM administration, HR systems, compliance documentation, client-facing processes
+  - Configured ClaimWizard CRM automation across 100+ active files, cutting missed-deadline incidents to near zero
+  - Deployed OrangeHRM as a self-hosted HR platform, saving $2K+ annually
+- **Marketing Intern** (Jun 2024 - Sep 2024) - **Eternity Media Productions** (Orlando, FL)
+  - Tracked email campaign KPIs and lifted engagement 15% through targeted copy/timing adjustments
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Project coordination, SOP development, workflow automation, process documentation, CRM administration, milestone tracking
+- **Secondary:** KPI dashboards, data visualization, A/B testing, campaign performance reporting
+- **Domain:** Operations, business analytics, marketing operations, HR systems
+- **Software:** Excel (MOS Certified), Google Sheets, HubSpot, Meta Business Suite, Google Business Profile, CiviCRM, ClaimWizard, Canva, WordPress, Monday.com, OrangeHRM, Google Workspace, Microsoft Office Suite, Adobe Creative Suite, Wix, HTML
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Six Sigma Yellow Belt Professional**
+- **MOS: Excel Associate**
+- **LinkedIn Learning: Data-Driven Decision-Making**
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None.
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
@@ -57,24 +68,32 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
 - **[TRAIT_1]** - [DESCRIPTION]
 - **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
+- **Strengths:** Turning data into insights, leading cross-functional teams, building systems that improve efficiency *(inferred from LinkedIn About - review before relying on this)*
 - **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Thrives in:** Roles connecting strategy to measurable results across business analytics, strategy, operations, or consulting *(inferred from LinkedIn About - review before relying on this)*
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Organizing complex processes, building reporting systems, and improving workflows
+- Solving operational problems, coordinating projects, analyzing data, supporting leadership teams, and working across departments
+- Learning new software and becoming the person who improves how a team operates
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Healthcare/Pharma/Medical Devices: AdventHealth, Orlando Health, CVS Health, UnitedHealth Group, Cigna, Pfizer, AbbVie, Johnson & Johnson, Boston Scientific, Abbott, Medtronic, Stryker, Baxter, Cardinal Health
+- Technology: Toast, HubSpot, Microsoft, Adobe, Salesforce, Datadog, ServiceNow
+- Gaming: Riot Games, Epic Games, Nintendo, EA, Sony Interactive Entertainment, Blizzard
+- Aerospace & Defense: Lockheed Martin, Northrop Grumman, RTX, L3Harris, Blue Origin, Boeing
+- Logistics: DHL, UPS, FedEx, Ryder
+- Also open to: higher education, nonprofit organizations, professional services
 
 ### Deal-breakers
 <!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Not commission-only positions
+- Not insurance sales, MLM opportunities, door-to-door sales, or primarily cold-calling sales roles
+- Business Development Representative roles only acceptable with salary + base pay (no commission-only)
+- Seeking stable full-time employment with training, mentorship, and career growth into higher-level business roles
+- Salary: $20/hour minimum, $24-$35/hour preferred depending on location and benefits
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

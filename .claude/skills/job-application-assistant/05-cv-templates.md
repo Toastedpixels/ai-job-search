@@ -106,11 +106,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Business/Operations Analyst and Coordinator roles:**
+> Recent Business Administration graduate (Integrated Business, University of Central Florida) with 6+ years of operations and project coordination experience. Built reporting dashboards that drove $42K in client revenue, configured CRM systems that cut missed-deadline incidents to near zero, and designed intake pipelines converting 33% of leads. Combines hands-on process improvement with strong analytics and cross-functional communication skills.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For CRM/Marketing/Program Coordinator roles:**
+> Integrated Business graduate with hands-on experience administering CRM platforms (ClaimWizard, CiviCRM, HubSpot), building multi-source reporting dashboards, and coordinating cross-functional teams and events. Promoted to lead a 15+ person agency across 3 client accounts, driving $42K in tracked revenue and 35x organic reach growth in under 5 months.
+
+**For entry-level/rotational/graduate development programs:**
+> Recent Business Administration graduate (Integrated Business, UCF) seeking to bring 6+ years of progressively increasing operational responsibility - CRM administration, HR systems deployment, governance documentation, and event/project coordination - into a structured early-career program. Adapts quickly to new tools and environments and thrives on making teams run more efficiently.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

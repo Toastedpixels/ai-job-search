@@ -19,11 +19,14 @@
 - **[BEHAVIOR_1]:** [DESCRIPTION]
 - **[BEHAVIOR_2]:** [DESCRIPTION]
 - **[BEHAVIOR_3]:** [DESCRIPTION]
+- *[Inferred from LinkedIn About - review before relying on this]* Turns data into insights - repeatedly frames work (campaign performance, HR processes, community events) around converting raw information into actionable recommendations
+- *[Inferred from LinkedIn About - review before relying on this]* Comfortable leading cross-functional teams and connecting strategy to measurable results
 
 ## How You Work Best
 - [ENVIRONMENT_PREFERENCE_1]
 - [ENVIRONMENT_PREFERENCE_2]
 - [ENVIRONMENT_PREFERENCE_3]
+- *[Inferred from LinkedIn About - review before relying on this]* Drawn to roles in business analytics, strategy, operations, or consulting where research and data-driven decision-making deliver measurable value
 
 ## Growth Areas (frame positively in applications)
 - **[AREA_1]:** [HOW_TO_FRAME_IT_POSITIVELY]

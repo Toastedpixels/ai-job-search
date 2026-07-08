@@ -35,6 +35,68 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+### ClaimWizard CRM automation (Process improvement / CRM administration)
+**Source:** CV - Adjuster Groups LLC
+**What happened:** Configured ClaimWizard CRM to automate intake, deadline tracking, and status alerts across 100+ active files, cutting missed-deadline incidents to near zero.
+**Why it matters:** Answers questions about process improvement, attention to detail, and technical/systems ownership.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### OrangeHRM deployment (Initiative / cost justification)
+**Source:** CV - Adjuster Groups LLC
+**What happened:** Researched, pitched, and deployed OrangeHRM as a self-hosted HR platform; presented a cost comparison to leadership that saved $2K+ annually.
+**Why it matters:** Answers questions about initiative, influencing leadership decisions, and cost-consciousness.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### CiviCRM + governance SOPs (Systems design / governance)
+**Source:** CV - Dominican Chamber of Commerce of Florida
+**What happened:** Implemented CiviCRM for membership tracking, configured role-based access controls, redesigned Google Drive architecture across 5 committees and 2 advisory boards, and wrote the governance SOPs and Robert's Rules documentation the board now operates by.
+**Why it matters:** Answers questions about building systems from scratch, working with volunteer/board structures, and documentation skills.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Prospect-to-member intake pipeline (Sales/conversion pipeline design)
+**Source:** CV - Dominican Chamber of Commerce of Florida
+**What happened:** Built and launched a prospect-to-member intake pipeline that converted 33% of leads to paying members in the first quarter.
+**Why it matters:** Answers questions about pipeline design, conversion optimization, and measurable business impact.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Pegasus Promotions revenue growth (Leadership / data-driven marketing)
+**Source:** CV - Pegasus Promotions, UCF American Marketing Association
+**What happened:** As Head of Agency managing a 15+ person team across 3 client accounts, drove $42K in tracked revenue, 35x organic reach growth, and 800+ new customers for a restaurant client in under 5 months.
+**Why it matters:** Answers questions about leadership, managing multiple accounts, and data-driven campaign strategy.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Email engagement lift (Analytics / campaign optimization)
+**Source:** CV - Eternity Media Productions
+**What happened:** Tracked email campaign metrics (open rate, CTR, conversions) and identified patterns that lifted engagement 15% through targeted copy and timing adjustments.
+**Why it matters:** Answers questions about analytical thinking and iterative optimization.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

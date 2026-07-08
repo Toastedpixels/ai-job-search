@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Project/operations coordination, SOP development, workflow automation, CRM administration (ClaimWizard, CiviCRM, HubSpot), reporting and KPI dashboards, process documentation, client/stakeholder management
+**Moderate match areas:** Data analysis and A/B testing, marketing operations, HR systems (OrangeHRM), event/program coordination, revenue/sales operations
+**Weak match areas:** Deep technical/data-science skills (SQL, Python, BI tools like Tableau/Power BI), formal supply chain/logistics systems, healthcare-specific compliance (HIPAA), enterprise software implementation (Salesforce admin, Workday)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Operations coordination, CRM administration, business operations, project/program coordination, marketing operations, reporting/analytics coordinator roles
+**Moderate:** Business analyst, business systems analyst, HR operations, customer success operations, quality/continuous improvement coordinator
+**Entry-level:** Roles explicitly for recent graduates - rotational leadership programs, university relations programs, graduate development programs, junior/associate consultant, management trainee
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land an entry-level/early-career business role that leverages operations, analytics, CRM administration, reporting, workflow improvement, project coordination, and client management experience
+- Join an organization that provides training, mentorship, and a clear path into higher-level business roles
+- Build toward business analytics, strategy, operations, or consulting as a long-term direction
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Organizing complex processes, building reporting systems, improving workflows, solving operational problems, coordinating projects, analyzing data, supporting leadership, learning new software, working across departments
+- Tasks that drain: Commission-only or primarily cold-calling sales work, door-to-door sales, MLM-style roles
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Seeking stable full-time employment, not commission-dependent income
+- **Flexibility**: Orlando-based; open to Central Florida, Tampa, Jacksonville, Miami, remote, Boston, NYC, or nationwide relocation if assistance/compensation makes it realistic
+- **Professional development**: Prioritizes employers offering training, mentorship, and growth into higher-level business roles; salary floor $20/hour, target range $24-$35/hour depending on location and benefits
 
 ### 6. Salary Benchmark (Optional)
 
