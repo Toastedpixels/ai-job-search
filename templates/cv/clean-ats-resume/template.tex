@@ -1,0 +1,103 @@
+%% Template: clean-ats-resume
+%% A clean, single-column, icon-free U.S.-style resume for early-career
+%% business / operations / marketing analytics / project coordination /
+%% CRM & reporting roles. Hard 1-page limit.
+%%
+%% Compile with: pdflatex (no custom fonts, no fontspec - fully portable)
+%% Compile command: pdflatex -interaction=nonstopmode <file>.tex
+
+\documentclass[10.5pt,letterpaper]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Single accent color for name + section headings. Change the hex to
+% restyle the whole resume from one place.
+\definecolor{accent}{HTML}{1F3864}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{-4pt}\titlerule]
+\titlespacing{\section}{0pt}{8pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=1pt, parsep=0pt, label=\textbullet}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ------------------------------------------------------------------
+% \cvheader{Title}{Company, Location}{Dates}
+% One-line "title (left) -- dates (right)" plus a second line for the
+% company/location. Used for both Professional Experience and Education.
+% ------------------------------------------------------------------
+\newcommand{\cvheader}[3]{%
+  \noindent\textbf{#1}\hfill\textit{#3}\\
+  \textit{#2}
+}
+
+\begin{document}
+
+% ============================================================
+%     HEADER
+% ============================================================
+\begin{center}
+  {\LARGE\bfseries\color{accent} [YOUR_NAME]}\\[2pt]
+  [YOUR_PHONE] \textbar\ \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} \textbar\ \href{[YOUR_LINKEDIN_URL]}{LinkedIn} \textbar\ [YOUR_CITY], [YOUR_STATE]
+\end{center}
+
+% ============================================================
+%     SUMMARY
+% ============================================================
+\section{Summary}
+[Write a 2-3 line summary tailored to the target role: years of experience, the 2-3 skills/tools most relevant to this posting, and one quantified achievement. Keep it to 2-3 lines -- this is a 1-page resume.]
+
+% ============================================================
+%     CORE SKILLS
+% ============================================================
+\section{Core Skills}
+\textbf{[Skill Category 1]:} [Specific tools/skills, comma-separated] \\
+\textbf{[Skill Category 2]:} [Specific tools/skills, comma-separated] \\
+\textbf{[Skill Category 3]:} [Specific tools/skills, comma-separated]
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+\section{Professional Experience}
+
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Achievement or responsibility, tailored to the posting -- lead with an action verb and a number where possible]
+  \item [Achievement or responsibility]
+  \item [Achievement or responsibility]
+\end{itemize}
+
+\vspace{4pt}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Achievement or responsibility]
+  \item [Achievement or responsibility]
+\end{itemize}
+
+\vspace{4pt}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Achievement or responsibility]
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+\section{Education}
+\cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]--[End]}
+
+% ============================================================
+%     CERTIFICATIONS (optional -- delete section if none)
+% ============================================================
+\section{Certifications}
+[Certification 1] \textbar\ [Certification 2] \textbar\ [Certification 3]
+
+\end{document}

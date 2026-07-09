@@ -2,6 +2,19 @@
 
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `clean-ats-resume`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/clean-ats-resume/template.tex` -- use this as the structural reference instead of the stock moderncv template
+> - **Manifest:** `templates/cv/clean-ats-resume/TEMPLATE.md` -- read this for style rules and known pitfalls before drafting
+> - **Compile with:** `pdflatex` (not `lualatex` as named in the stock guidance below)
+> - **Fonts:** Latin Modern Sans, system/TeX-distribution font via `lmodern` -- no bundled font files, no `fontspec`
+> - **Page limit:** exactly 1 page (not 2, as in the stock guidance below)
+> - **Output file:** unchanged (`cv/main_<company>.tex`); no class/font files to copy -- the template uses only standard packages (`geometry`, `titlesec`, `enumitem`, `xcolor`, `hyperref`)
+<!-- END ACTIVE-TEMPLATE -->
+
 ## Template: LaTeX moderncv (Banking Style)
 
 All CVs use the moderncv LaTeX package with the "banking" style and "blue" color scheme.
