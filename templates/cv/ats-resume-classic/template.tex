@@ -1,0 +1,156 @@
+%% Template: ats-resume-classic
+%% A single-column, icon-free, table-free U.S. resume modeled directly on
+%% a real compact classic resume layout: one-line contact header, Summary
+%% -> Professional Experience -> Education -> Skills and Certifications
+%% (skills/certs as terse comma lists at the end, not a verbose narrative
+%% "Core Competencies" block). Built to genuinely fit 1 page for a
+%% candidate with 3-4 real roles, not just "allow up to 2".
+%%
+%% Compile with: lualatex (xelatex also works unchanged)
+%% Compile command: lualatex -interaction=nonstopmode <file>.tex
+
+\documentclass[10.5pt,letterpaper]{article}
+
+\usepackage[margin=0.6in]{geometry}
+% fontspec + TeX Gyre Heros: a free, metric-compatible Helvetica clone.
+% Helvetica/Arial-style sans-serif is one of the most commonly
+% recommended ATS-safe resume fonts (clean, highly legible at small
+% sizes, universally familiar to recruiters), and TeX Gyre Heros ships
+% as standard OpenType with every TeX Live/MiKTeX install -- no bundled
+% font files needed. Verified other common resume-font picks (Carlito/
+% Calibri clone, Lato, Open Sans, PT Sans) are NOT available on a
+% stock MiKTeX install without adding font packages; only tex-gyre
+% fonts (Heros/Termes/etc.) are guaranteed present out of the box.
+% Needs no xltxtra/xunicode (XeTeX-era packages fontspec alone has long
+% since made unnecessary), so this carries none of the fontspec/
+% xunicode MiKTeX auto-installer fragility other custom-font templates
+% in this repo can hit.
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+% Fully monochrome -- no xcolor, no accent color, matches a plain
+% printed-Word-doc look. ALL CAPS bold section labels, no rule line
+% underneath (deliberately -- the reference resume this is modeled on
+% uses whitespace, not a rule, to separate sections, which reads as
+% cleaner at 10.5pt and saves vertical space toward the 1-page target).
+\titleformat{\section}{\bfseries\MakeUppercase}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{2pt}
+
+% Plain ASCII "-" (a single hyphen, NOT "--") as the bullet marker.
+% "--" is a real LaTeX gotcha: two consecutive hyphens ligature into an
+% en dash (-) at typeset time, not a plain hyphen -- an earlier version
+% of this template used "label=--" here by mistake, which is why
+% bullets and headers rendered with dash-like characters instead of
+% plain hyphens. A single "-" never ligatures. This also sidesteps a
+% separate risk with \textbullet: under some font/engine combinations
+% it can lack a ToUnicode mapping and extract as an unreadable
+% replacement character in pdftotext. Tight spacing throughout
+% (itemsep/topsep/parsep all near-zero) is what makes the 1-page target
+% achievable with a full 3-4 job history.
+\setlist[itemize]{leftmargin=1.05em, itemsep=0pt, topsep=1pt, parsep=0pt, label=-}
+
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+% ------------------------------------------------------------------
+% \cvheader{Title}{Company, Location}{Dates}
+% Plain-text two-line block -- no tabular/tabularx, and deliberately no
+% \hfill right-alignment either: \hfill-based date columns were tested
+% and found to misattribute a date to the wrong entry under
+% `pdftotext -layout` (looks fine visually, breaks silently in the text
+% layer). Dates go inline right after the title instead, which is the
+% only ordering pdftotext extracts unambiguously. Separator is a pipe
+% ("|", matching the header contact line), not a dash -- avoids any
+% dash-like character in the title/date line entirely.
+% ------------------------------------------------------------------
+\newcommand{\cvheader}[3]{%
+  \noindent\textbf{#1} \textbar\ \textit{#3}\\
+  \textit{#2}
+}
+
+\begin{document}
+
+% ============================================================
+%     HEADER
+% ============================================================
+\begin{center}
+  {\Large\bfseries [YOUR_NAME]}\\[1pt]
+  [YOUR_CITY], [YOUR_STATE] \textbar\ [YOUR_PHONE] \textbar\ \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} \textbar\ \href{[YOUR_LINKEDIN_URL]}{[YOUR_LINKEDIN_DISPLAY]}
+\end{center}
+\vspace{2pt}
+
+% Show the LinkedIn (and any other profile) URL as visible, literal
+% text in the header above -- not hidden behind a generic "LinkedIn"
+% link label. A printed copy or a non-clickable PDF viewer should still
+% show the actual address, and some ATS keyword scans look for the
+% literal domain/handle text.
+
+% ============================================================
+%     SUMMARY
+% ============================================================
+\section{Summary}
+[2-4 line summary: years of experience, the 2-3 tools/skills most relevant to the target posting, and one quantified achievement. Keep this tight -- every line here is a line the Experience section doesn't get.]
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+\section{Experience}
+
+\needspace{8\baselineskip}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility -- action verb + number where possible]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{3pt}
+\needspace{7\baselineskip}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{3pt}
+\needspace{6\baselineskip}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{3pt}
+\needspace{5\baselineskip}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+\section{Education}
+\needspace{3\baselineskip}
+\cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]-[End]}
+
+% ============================================================
+%     SKILLS AND CERTIFICATIONS
+% ============================================================
+% Deliberately terse comma lists, not full-sentence bullets -- this is
+% the section that makes the 1-page target achievable versus a longer
+% narrative "Core Competencies" block. Add/remove category lines to fit
+% the candidate's actual skill set; do not pad with generic terms.
+\section{Skills and Certifications}
+\textbf{[Category 1]:} [comma-separated items] \\
+\textbf{[Category 2]:} [comma-separated items] \\
+\textbf{[Category 3]:} [comma-separated items] \\
+\textbf{Certifications:} [Cert 1], [Cert 2], [Cert 3]
+
+\end{document}

@@ -3,17 +3,18 @@
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 <!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
-> **Active template override: `ats-flex-resume`**
+> **Active template override: `ats-resume-classic`**
 >
 > A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
 >
-> - **Template skeleton:** `templates/cv/ats-flex-resume/template.tex` -- use this as the structural reference instead of the stock moderncv template
-> - **Manifest:** `templates/cv/ats-flex-resume/TEMPLATE.md` -- read this for style rules, page-budget guidance, and known pitfalls before drafting
-> - **Compile with:** `lualatex` (xelatex also works unchanged; not the same lualatex the stock guidance below names for moderncv specifically -- this template has no fontawesome dependency)
-> - **Fonts:** Latin Modern Sans, system/TeX-distribution font via `lmodern` -- no bundled font files, no `fontspec`
-> - **Page limit:** 1 page by default; 2 pages only if the candidate's real content genuinely requires it (not a hard 2-page requirement like the stock guidance below, and not a hard 1-page cap like the previous `clean-ats-resume` template)
-> - **No tables:** Professional Experience and Education entries use `\cvheader{}` (plain text + `\hfill`), never `tabular`/`tabularx`
-> - **Output file:** unchanged (`cv/main_<company>.tex`); no class/font files to copy -- the template uses only standard packages (`geometry`, `titlesec`, `enumitem`, `hyperref`, no `xcolor`)
+> - **Template skeleton:** `templates/cv/ats-resume-classic/template.tex` -- use this as the structural reference instead of the stock moderncv template
+> - **Manifest:** `templates/cv/ats-resume-classic/TEMPLATE.md` -- read this for style rules, page-budget guidance, and known pitfalls (including a documented `pdftotext`-vs-`pypdf` cross-check finding) before drafting
+> - **Compile with:** `lualatex` or `xelatex` (both work unchanged; uses `fontspec` + OpenType Latin Modern Sans, no `xltxtra`/`xunicode`)
+> - **Page limit:** genuinely targets 1 page (not just "allow up to 2" like the previous `ats-flex-resume` template) -- section order and content density are modeled directly on the candidate's own real 1-page resume
+> - **Section order:** Summary -> Experience -> Education -> Skills and Certifications (Experience right after Summary; Skills and Certifications as terse comma lists at the end, not a verbose narrative block)
+> - **No tables, no `\hfill`:** Professional Experience and Education entries use `\cvheader{}` (`Title -- Dates` inline, company/location on the next line) -- no `tabular`/`tabularx`, and no `\hfill` right-alignment (found to scramble `pdftotext` reading order in the previous template)
+> - **Links:** the LinkedIn URL is shown as visible literal text in the header (e.g. `linkedin.com/in/handle`), not hidden behind a generic "LinkedIn" link label
+> - **Output file:** unchanged (`cv/main_<company>.tex`); no class/font files to copy -- standard packages only (`geometry`, `fontspec`, `titlesec`, `enumitem`, `hyperref`, `needspace`, no `xcolor`)
 <!-- END ACTIVE-TEMPLATE -->
 
 ## Template: LaTeX moderncv (Banking Style)
