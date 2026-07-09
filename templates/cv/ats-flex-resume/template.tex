@@ -19,6 +19,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{needspace}
 
 % Fully monochrome by design -- no xcolor, no accent color. Maximizes
 % compatibility with ATS parsers/reviewers that flag colored text, and
@@ -26,7 +27,11 @@
 \titleformat{\section}{\normalsize\bfseries\scshape}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{4pt}
 
-\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=1pt, parsep=0pt, label=\textbullet}
+% Plain ASCII "-" as the bullet marker, not \textbullet. \textbullet under
+% lualatex+lmodern's Type1 fallback fonts can lack a ToUnicode mapping,
+% extracting as a "�" replacement character in pdftotext -- a real ATS
+% failure, not cosmetic. A literal hyphen always extracts cleanly.
+\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=1pt, parsep=0pt, label=--}
 
 \setlength{\parindent}{0pt}
 \pagenumbering{gobble}
@@ -34,12 +39,15 @@
 % ------------------------------------------------------------------
 % \cvheader{Title}{Company, Location}{Dates}
 % Plain-text two-line block -- no tabular/tabularx anywhere in this
-% template. Alignment is done with \hfill on a single \noindent line,
-% which extracts as ordinary left-to-right text (a table would risk an
-% ATS parser reading cells out of order).
+% template, AND deliberately no \hfill right-alignment either: testing
+% with pdftotext -layout showed \hfill-based columns can make the
+% extractor misattribute a date to the wrong entry two lines away (worse
+% than a table, and harder to spot since it looks fine visually). Dates
+% are inline right after the title instead, which is the only ordering
+% pdftotext can extract without ambiguity.
 % ------------------------------------------------------------------
 \newcommand{\cvheader}[3]{%
-  \noindent\textbf{#1}\hfill{#3}\\
+  \noindent\textbf{#1} -- \textit{#3}\\
   \textit{#2}
 }
 
@@ -73,6 +81,7 @@
 % ============================================================
 \section{Professional Experience}
 
+\needspace{9\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
 \begin{itemize}
   \item [Measurable achievement or responsibility -- action verb + number where possible]
@@ -82,6 +91,7 @@
 \end{itemize}
 
 \vspace{5pt}
+\needspace{8\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
 \begin{itemize}
   \item [Measurable achievement or responsibility]
@@ -90,6 +100,7 @@
 \end{itemize}
 
 \vspace{5pt}
+\needspace{7\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
 \begin{itemize}
   \item [Measurable achievement or responsibility]
@@ -97,6 +108,7 @@
 \end{itemize}
 
 \vspace{5pt}
+\needspace{6\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
 \begin{itemize}
   \item [Measurable achievement or responsibility]
@@ -106,9 +118,11 @@
 %     EDUCATION
 % ============================================================
 \section{Education}
+\needspace{3\baselineskip}
 \cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]--[End]}
 
 \vspace{3pt}
+\needspace{3\baselineskip}
 \cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]--[End]}
 
 % ============================================================
