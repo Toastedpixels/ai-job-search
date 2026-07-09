@@ -3,16 +3,17 @@
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 <!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
-> **Active template override: `clean-ats-resume`**
+> **Active template override: `ats-flex-resume`**
 >
 > A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
 >
-> - **Template skeleton:** `templates/cv/clean-ats-resume/template.tex` -- use this as the structural reference instead of the stock moderncv template
-> - **Manifest:** `templates/cv/clean-ats-resume/TEMPLATE.md` -- read this for style rules and known pitfalls before drafting
-> - **Compile with:** `pdflatex` (not `lualatex` as named in the stock guidance below)
+> - **Template skeleton:** `templates/cv/ats-flex-resume/template.tex` -- use this as the structural reference instead of the stock moderncv template
+> - **Manifest:** `templates/cv/ats-flex-resume/TEMPLATE.md` -- read this for style rules, page-budget guidance, and known pitfalls before drafting
+> - **Compile with:** `lualatex` (xelatex also works unchanged; not the same lualatex the stock guidance below names for moderncv specifically -- this template has no fontawesome dependency)
 > - **Fonts:** Latin Modern Sans, system/TeX-distribution font via `lmodern` -- no bundled font files, no `fontspec`
-> - **Page limit:** exactly 1 page (not 2, as in the stock guidance below)
-> - **Output file:** unchanged (`cv/main_<company>.tex`); no class/font files to copy -- the template uses only standard packages (`geometry`, `titlesec`, `enumitem`, `xcolor`, `hyperref`)
+> - **Page limit:** 1 page by default; 2 pages only if the candidate's real content genuinely requires it (not a hard 2-page requirement like the stock guidance below, and not a hard 1-page cap like the previous `clean-ats-resume` template)
+> - **No tables:** Professional Experience and Education entries use `\cvheader{}` (plain text + `\hfill`), never `tabular`/`tabularx`
+> - **Output file:** unchanged (`cv/main_<company>.tex`); no class/font files to copy -- the template uses only standard packages (`geometry`, `titlesec`, `enumitem`, `hyperref`, no `xcolor`)
 <!-- END ACTIVE-TEMPLATE -->
 
 ## Template: LaTeX moderncv (Banking Style)

@@ -1,0 +1,120 @@
+%% Template: ats-flex-resume
+%% A clean, single-column, icon-free, table-free U.S.-style resume for
+%% business operations / marketing analyst / project coordinator / CRM /
+%% reporting roles. Fits 1 page by default; flows to 2 pages only if the
+%% content genuinely requires it (no forced page count, no font-shrinking
+%% hacks to force-fit).
+%%
+%% Compile with: lualatex (also works with xelatex unchanged -- no
+%% fontspec/custom fonts, so there is nothing engine-specific here beyond
+%% the two both being fontspec-capable if you later add a custom font)
+%% Compile command: lualatex -interaction=nonstopmode <file>.tex
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+% Fully monochrome by design -- no xcolor, no accent color. Maximizes
+% compatibility with ATS parsers/reviewers that flag colored text, and
+% keeps the template usable with zero changes under any TeX engine.
+\titleformat{\section}{\normalsize\bfseries\scshape}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=1pt, parsep=0pt, label=\textbullet}
+
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+% ------------------------------------------------------------------
+% \cvheader{Title}{Company, Location}{Dates}
+% Plain-text two-line block -- no tabular/tabularx anywhere in this
+% template. Alignment is done with \hfill on a single \noindent line,
+% which extracts as ordinary left-to-right text (a table would risk an
+% ATS parser reading cells out of order).
+% ------------------------------------------------------------------
+\newcommand{\cvheader}[3]{%
+  \noindent\textbf{#1}\hfill{#3}\\
+  \textit{#2}
+}
+
+\begin{document}
+
+% ============================================================
+%     HEADER
+% ============================================================
+\begin{center}
+  {\LARGE\bfseries [YOUR_NAME]}\\[2pt]
+  [YOUR_PHONE] \textbar\ \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} \textbar\ \href{[YOUR_LINKEDIN_URL]}{LinkedIn} \textbar\ [YOUR_CITY], [YOUR_STATE]
+\end{center}
+
+% ============================================================
+%     SUMMARY
+% ============================================================
+\section{Professional Summary}
+[2-3 line summary tailored to the target role: years of experience, the 2-3 skills/tools most relevant to this posting, and one quantified achievement.]
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+\section{Core Competencies}
+\textbf{[Skill Category 1]:} [Specific tools/skills, comma-separated] \\
+\textbf{[Skill Category 2]:} [Specific tools/skills, comma-separated] \\
+\textbf{[Skill Category 3]:} [Specific tools/skills, comma-separated] \\
+\textbf{[Skill Category 4]:} [Specific tools/skills, comma-separated]
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+\section{Professional Experience}
+
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility -- action verb + number where possible]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{5pt}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{5pt}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+\vspace{5pt}
+\cvheader{[Job Title]}{[Company], [City, State]}{[Start]--[End]}
+\begin{itemize}
+  \item [Measurable achievement or responsibility]
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+\section{Education}
+\cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]--[End]}
+
+\vspace{3pt}
+\cvheader{[Degree, Field]}{[Institution], [City, State]}{[Start]--[End]}
+
+% ============================================================
+%     CERTIFICATIONS (optional -- delete section if none)
+% ============================================================
+\section{Certifications}
+[Certification 1] \textbar\ [Certification 2] \textbar\ [Certification 3]
+
+\end{document}
