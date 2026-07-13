@@ -1,10 +1,12 @@
 %% Template: ats-resume-classic
-%% A single-column, icon-free, table-free U.S. resume modeled directly on
-%% a real compact classic resume layout: one-line contact header, Summary
-%% -> Professional Experience -> Education -> Skills and Certifications
-%% (skills/certs as terse comma lists at the end, not a verbose narrative
-%% "Core Competencies" block). Built to genuinely fit 1 page for a
-%% candidate with 3-4 real roles, not just "allow up to 2".
+%% A single-column, icon-free, table-free U.S. resume built against
+%% verified sources, not guesswork -- see TEMPLATE.md "Research basis"
+%% for the specific claims and citations (Berkeley Career Engagement,
+%% Jobscan, NACE, Yale OCS, MIT CAPD). Layout: one-line contact header,
+%% Summary -> Professional Experience -> Education -> Skills and
+%% Certifications (skills/certs as terse comma lists at the end, not a
+%% verbose narrative "Core Competencies" block). Built to genuinely fit
+%% 1 page for a candidate with 3-4 real roles, not just "allow up to 2".
 %%
 %% Compile with: lualatex (xelatex also works unchanged)
 %% Compile command: lualatex -interaction=nonstopmode <file>.tex
@@ -37,8 +39,18 @@
 % underneath (deliberately -- the reference resume this is modeled on
 % uses whitespace, not a rule, to separate sections, which reads as
 % cleaner at 10.5pt and saves vertical space toward the 1-page target).
+% Spacing values below (7pt/2pt title spacing, 0.5pt/1pt item spacing)
+% are deliberately tuned to use most of the page for a typical 3-4 job
+% history, not to cram: an earlier near-zero version of these values
+% left roughly 40% of the page blank for real candidate content. IMPORTANT
+% if you increase these further: each fixed-cost bump (title spacing,
+% \vspace between jobs) is cheap, but bumping font size or margins is
+% NOT -- both compound across every wrapped line in the document and
+% can push a fitting 1-pager to 2 pages from a change that looks small
+% in isolation. Prefer tuning title/item spacing over font/margin size
+% if the page needs to use more (or less) space.
 \titleformat{\section}{\bfseries\MakeUppercase}{}{0em}{}
-\titlespacing{\section}{0pt}{6pt}{2pt}
+\titlespacing{\section}{0pt}{7pt}{2pt}
 
 % Plain ASCII "-" (a single hyphen, NOT "--") as the bullet marker.
 % "--" is a real LaTeX gotcha: two consecutive hyphens ligature into an
@@ -48,10 +60,8 @@
 % plain hyphens. A single "-" never ligatures. This also sidesteps a
 % separate risk with \textbullet: under some font/engine combinations
 % it can lack a ToUnicode mapping and extract as an unreadable
-% replacement character in pdftotext. Tight spacing throughout
-% (itemsep/topsep/parsep all near-zero) is what makes the 1-page target
-% achievable with a full 3-4 job history.
-\setlist[itemize]{leftmargin=1.05em, itemsep=0pt, topsep=1pt, parsep=0pt, label=-}
+% replacement character in pdftotext.
+\setlist[itemize]{leftmargin=1.05em, itemsep=0.5pt, topsep=1pt, parsep=0pt, label=-}
 
 \setlength{\parindent}{0pt}
 \pagenumbering{gobble}
@@ -81,7 +91,7 @@
   {\Large\bfseries [YOUR_NAME]}\\[1pt]
   [YOUR_CITY], [YOUR_STATE] \textbar\ [YOUR_PHONE] \textbar\ \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} \textbar\ \href{[YOUR_LINKEDIN_URL]}{[YOUR_LINKEDIN_DISPLAY]}
 \end{center}
-\vspace{2pt}
+\vspace{4pt}
 
 % Show the LinkedIn (and any other profile) URL as visible, literal
 % text in the header above -- not hidden behind a generic "LinkedIn"
@@ -98,39 +108,46 @@
 % ============================================================
 %     PROFESSIONAL EXPERIENCE
 % ============================================================
-\section{Experience}
+% "Professional Experience" (not "Experience") -- standard section label
+% per Berkeley Career Engagement / Jobscan ATS guidance (see TEMPLATE.md
+% "Research basis"). Every bullet: Action verb + Project + Result,
+% quantified where the underlying data genuinely supports a number
+% (Yale OCS / MIT CAPD formula -- see TEMPLATE.md). Don't invent a
+% number the candidate's real profile doesn't support; an honest
+% unquantified bullet beats a fabricated metric.
+\section{Professional Experience}
 
 \needspace{8\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
 \begin{itemize}
-  \item [Measurable achievement or responsibility -- action verb + number where possible]
-  \item [Measurable achievement or responsibility]
-  \item [Measurable achievement or responsibility]
-  \item [Measurable achievement or responsibility]
+  \item [Action verb + what you built/did + quantified result, e.g. "Automated X, cutting Y by Z percent"]
+  \item [Action verb + project + result]
+  \item [Action verb + project + result]
+  \item [Action verb + project + result]
 \end{itemize}
 
-\vspace{3pt}
+\vspace{4pt}
 \needspace{7\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
 \begin{itemize}
-  \item [Measurable achievement or responsibility]
-  \item [Measurable achievement or responsibility]
-  \item [Measurable achievement or responsibility]
+  \item [Action verb + project + result]
+  \item [Action verb + project + result]
+  \item [Action verb + project + result]
 \end{itemize}
 
-\vspace{3pt}
+\vspace{4pt}
 \needspace{6\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
 \begin{itemize}
-  \item [Measurable achievement or responsibility]
-  \item [Measurable achievement or responsibility]
+  \item [Action verb + project + result]
+  \item [Action verb + project + result]
 \end{itemize}
 
-\vspace{3pt}
+\vspace{4pt}
 \needspace{5\baselineskip}
 \cvheader{[Job Title]}{[Company], [City, State]}{[Start]-[End]}
 \begin{itemize}
-  \item [Measurable achievement or responsibility]
+  \item [Action verb + project + result]
 \end{itemize}
 
 % ============================================================
